@@ -164,6 +164,7 @@ metadata:
   namespace: bank
   annotations:
     kubernetes.io/ingress.class: "gce"
+    kubernetes.io/ingress.allow-http: "true"
     #kubernetes.io/ingress.allow-http: true # GKE Ingress controller (Google Cloud Load Balancer)
     # ingress.gcp.kubernetes.io/pre-shared-cert: "your-ssl-cert-name"  # Optional SSL cert
 spec:
