@@ -26,7 +26,7 @@ spec:
   ports:
     - name: http
       port: 80
-      targetPort: 32007
+      targetPort: 8080
   selector:
     app: frontend
     application: bank-of-anthos
