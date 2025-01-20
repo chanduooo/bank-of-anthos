@@ -33,7 +33,7 @@ spec:
     environment: development
     team: frontend
     tier: web
-  type: LoadBalancer
+  #type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -156,3 +156,24 @@ spec:
               - key: jwtRS256.key.pub
                 path: publickey
             secretName: jwt-key
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: frontend-ingress
+  namespace: bank
+  annotations:
+    kubernetes.io/ingress.class: "gce"  # GKE Ingress controller (Google Cloud Load Balancer)
+    # ingress.gcp.kubernetes.io/pre-shared-cert: "your-ssl-cert-name"  # Optional SSL cert
+spec:
+  rules:
+    - host: frontend.bank.example.com  # Replace with your DNS name or GKE IP address
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 80
