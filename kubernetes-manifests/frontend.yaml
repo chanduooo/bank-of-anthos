@@ -168,12 +168,11 @@ metadata:
     #kubernetes.io/ingress.allow-http: true # GKE Ingress controller (Google Cloud Load Balancer)
     # ingress.gcp.kubernetes.io/pre-shared-cert: "your-ssl-cert-name"  # Optional SSL cert
 spec:
-  rules:
-  - host: frontend.bank.example.com  # Replace with your DNS name or GKE IP address
-    http:
+ rules:
+  - http:
       paths:
       - path: /*
-        pathType: Prefix
+        pathType: ImplementationSpecific
         backend:
           service:
             name: frontend
