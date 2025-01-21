@@ -22,8 +22,8 @@ metadata:
     team: frontend
     tier: web
   name: frontend
-  annotations:
-    cloud.google.com/neg: '{"ingress": true}'
+  # annotations:
+  #   cloud.google.com/neg: '{"ingress": true}'
 spec:
   ports:
     - name: http
