@@ -167,8 +167,8 @@ metadata:
     #kubernetes.io/ingress.class: "gce-internal"
     kubernetes.io/ingress.allow-http: "true"
 spec:
- # - host: google.com
  rules:
+ #- host: google.com
   - http:
       paths:
       - path: /*
