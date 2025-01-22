@@ -35,7 +35,7 @@ spec:
     environment: development
     team: frontend
     tier: web
-  type: NodePort
+  #type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
