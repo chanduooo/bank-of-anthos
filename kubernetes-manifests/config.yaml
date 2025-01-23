@@ -16,7 +16,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: environment-config
-  namespace: bank
+  namespace: bank-dev
 data:
   LOCAL_ROUTING_NUM: "883745000"
   PUB_KEY_PATH: "/tmp/.ssh/publickey"
@@ -25,7 +25,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: service-api-config
-  namespace: bank
+  namespace: bank-dev
 data:
   TRANSACTIONS_API_ADDR: "ledgerwriter:8080"
   BALANCES_API_ADDR: "balancereader:8080"
@@ -37,7 +37,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: demo-data-config
-  namespace: bank
+  namespace: bank-dev
 data:
   USE_DEMO_DATA: "True"
   DEMO_LOGIN_USERNAME: "testuser"
@@ -47,7 +47,7 @@ data:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  namespace: bank
+  namespace: bank-dev
   annotations:
     iam.gke.io/gcp-service-account: gke-workload-development@bank-of-anthos-ci.iam.gserviceaccount.com
   name: bank-of-anthos
