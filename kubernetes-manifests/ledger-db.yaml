@@ -22,7 +22,7 @@ data:
   SPRING_DATASOURCE_USERNAME: admin
 kind: ConfigMap
 metadata:
-  namespace: bank
+  namespace: bank-dev
   labels:
     app: ledger-db
     application: bank-of-anthos
@@ -34,7 +34,7 @@ metadata:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: bank
+  namespace: bank-dev
   labels:
     application: bank-of-anthos
     environment: development
@@ -57,7 +57,7 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  namespace: bank
+  namespace: bank-dev
   labels:
     application: bank-of-anthos
     environment: development
