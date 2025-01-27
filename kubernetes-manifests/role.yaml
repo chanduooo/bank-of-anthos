@@ -22,7 +22,7 @@ metadata:
   namespace: bankdev
 subjects:
 - kind: ServiceAccount
-  name: ns-reconciler-bank-dev
+  name: ns-reconciler-bankdev
   namespace: config-management-system
 roleRef:
   kind: Role
