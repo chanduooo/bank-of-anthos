@@ -15,7 +15,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: bank-dev
+  namespace: bankdev
   labels:
     application: bank-of-anthos
     environment: development
@@ -40,7 +40,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: bank-dev
+  namespace: bankdev
   labels:
     application: bank-of-anthos
     environment: development
@@ -163,7 +163,7 @@ spec:
 # kind: Ingress
 # metadata:
 #   name: frontend-ingress
-#   namespace: bank-dev
+#   namespace: bankdev
 #   annotations:
 #     #kubernetes.io/ingress.class: "gce"
 #     kubernetes.io/ingress.class: "gce-internal"
