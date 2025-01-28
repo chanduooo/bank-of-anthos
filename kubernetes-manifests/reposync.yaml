@@ -2,7 +2,8 @@ apiVersion: configsync.gke.io/v1beta1
 kind: RepoSync
 metadata:
   name: prod
-  namespace: config-management-system
+  namespace: bankdev
+  
 spec:
   sourceType: git
   # Since this is for a namespace repository, the format is unstructured
