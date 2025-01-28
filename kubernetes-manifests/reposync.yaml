@@ -1,18 +1,18 @@
-# apiVersion: configsync.gke.io/v1beta1
-# kind: RepoSync
-# metadata:
-#   name: prod
-#   namespace: bankdev
-# spec:
-#   sourceType: git
-#   # Since this is for a namespace repository, the format is unstructured
-#   sourceFormat: unstructured
-#   git:
-#     repo: https://github.com/chanduooo/bank-of-anthos.git
-#     revision: HEAD
-#     branch: dev
-#     dir: "kubernetes-manifests"
-#     auth: token
-#     secretRef:
-#       name: git-creds
-#     noSSLVerify: false
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: prod
+  namespace: bank
+spec:
+  sourceType: git
+  # Since this is for a namespace repository, the format is unstructured
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/chanduooo/bank-of-anthos.git
+    revision: HEAD
+    branch: dev
+    dir: "kubernetes-manifests"
+    auth: token
+    secretRef:
+      name: git-creds
+    noSSLVerify: false
