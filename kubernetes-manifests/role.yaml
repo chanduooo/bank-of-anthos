@@ -12,6 +12,9 @@ rules:
 - apiGroups: [""]
   resources: ["serviceaccounts"]
   verbs: ["*"]
+- apiGroups: [""]
+  resources: ["services"]
+  verbs: ["*"]
 
 ---
 # ROOT_REPO/namespaces/bank-dev/sync-rolebinding.yaml
