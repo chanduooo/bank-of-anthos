@@ -2,7 +2,7 @@ apiVersion: configsync.gke.io/v1beta1
 kind: RepoSync
 metadata:
   name: prod
-  namespace: bank
+  namespace: bankdev
   
 spec:
   sourceType: git
