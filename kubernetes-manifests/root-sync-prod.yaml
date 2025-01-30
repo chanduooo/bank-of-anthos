@@ -1,7 +1,7 @@
 apiVersion: configsync.gke.io/v1beta1
 kind: RootSync
 metadata:
-  name: prod
+  name: prod-env
   namespace: config-management-system
 spec:
   sourceType: git
