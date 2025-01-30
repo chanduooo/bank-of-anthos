@@ -47,7 +47,7 @@ data:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  namespace: bank
+  namespace: bankstage
   annotations:
     iam.gke.io/gcp-service-account: gke-workload-development@bank-of-anthos-ci.iam.gserviceaccount.com
   name: bank-of-anthos
