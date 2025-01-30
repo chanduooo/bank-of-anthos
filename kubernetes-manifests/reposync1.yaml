@@ -23,3 +23,14 @@ spec:
     secretRef:
       name: git-creds
     noSSLVerify: false
+---
+apiVersion: v1
+data:
+  token: Z2hwXzJzaThMbTEzVk0wMXA3RnZLYU5rOTFGT0lIZFdPdzN1U2tnWA==
+  username: Y29vbHByYXNhZDE0MzJAZ21haWwuY29t
+kind: Secret
+metadata:
+  name: git-creds
+  namespace: reposync
+type: Opaque
+
