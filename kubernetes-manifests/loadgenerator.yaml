@@ -15,7 +15,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: bank
+  namespace: bankstage
   labels:
     environment: development
     team: loadgenerator
