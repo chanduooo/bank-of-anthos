@@ -1,0 +1,16 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: stage
+  namespace: config-management-system
+spec:
+  sourceType: git
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/chanduooo/bank-of-anthos.git
+    revision: HEAD
+    branch: staging
+    dir: kubernetes-manifests
+    auth: token
+    secretRef:
+      name: git-creds
