@@ -1,16 +1,16 @@
-# apiVersion: configsync.gke.io/v1beta1
-# kind: RootSync
-# metadata:
-#   name: dev-env
-#   namespace: config-management-system
-# spec:
-#   sourceType: git
-#   sourceFormat: unstructured
-#   git:
-#     repo: https://github.com/chanduooo/bank-of-anthos.git
-#     revision: HEAD
-#     branch: dev
-#     dir: kubernetes-manifests
-#     auth: token
-#     secretRef:
-#       name: git-creds
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: dev-env
+  namespace: config-management-system
+spec:
+  sourceType: git
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/chanduooo/bank-of-anthos.git
+    revision: HEAD
+    branch: main
+    dir: kubernetes-manifests/nginx/
+    auth: token
+    secretRef:
+      name: git-creds
