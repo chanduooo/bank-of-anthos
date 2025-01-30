@@ -25,7 +25,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: service-api-config
-  namespace: bank
+  namespace: bankstage
 data:
   TRANSACTIONS_API_ADDR: "ledgerwriter:8080"
   BALANCES_API_ADDR: "balancereader:8080"
