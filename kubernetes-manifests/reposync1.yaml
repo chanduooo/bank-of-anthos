@@ -1,8 +1,14 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: reposync
+---
 apiVersion: configsync.gke.io/v1beta1
 kind: RepoSync
 metadata:
   name: prod
-  namespace: bankdev
+  namespace: reposync
   
 spec:
   sourceType: git
