@@ -48,7 +48,7 @@ metadata:
     tier: web
   name: frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: frontend
