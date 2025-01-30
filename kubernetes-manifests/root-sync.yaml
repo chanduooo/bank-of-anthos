@@ -11,6 +11,6 @@ spec:
     revision: HEAD
     branch: dev
     dir: kubernetes-manifests
-    auth: tocken
+    auth: token
     secretRef:
       name: git-creds
