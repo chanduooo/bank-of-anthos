@@ -16,7 +16,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: environment-config
-  namespace: bank
+  namespace: bankstage
 data:
   LOCAL_ROUTING_NUM: "883745000"
   PUB_KEY_PATH: "/tmp/.ssh/publickey"
@@ -37,7 +37,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: demo-data-config
-  namespace: bank
+  namespace: bankstage
 data:
   USE_DEMO_DATA: "True"
   DEMO_LOGIN_USERNAME: "testuser"
