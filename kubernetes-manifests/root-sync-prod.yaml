@@ -10,7 +10,7 @@ spec:
     repo: https://github.com/chanduooo/bank-of-anthos.git
     revision: HEAD
     branch: main
-    dir: kubernetes-manifests/nginx/
+    dir: kubernetes-manifests/nginx
     auth: token
     secretRef:
       name: git-creds
