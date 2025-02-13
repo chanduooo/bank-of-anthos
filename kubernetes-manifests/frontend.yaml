@@ -22,8 +22,8 @@ metadata:
     team: frontend
     tier: web
   name: frontend
-  annotations:
-    cloud.google.com/neg: '{"ingress": true}'
+  # annotations:
+  #   cloud.google.com/neg: '{"ingress": true}'
 spec:
   ports:
     - name: http
@@ -35,7 +35,7 @@ spec:
     environment: development
     team: frontend
     tier: web
-  # type: LoadBalancer
+  type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -158,25 +158,25 @@ spec:
               - key: jwtRS256.key.pub
                 path: publickey
             secretName: jwt-key
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: frontend-ingress
-  namespace: bank
-  annotations:
-    #kubernetes.io/ingress.class: "gce"
-    kubernetes.io/ingress.class: "gce-internal"
-    kubernetes.io/ingress.allow-http: "true"
-spec:
- rules:
- #- host: google.com
-  - http:
-      paths:
-      - path: /*
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: frontend
-            port:
-              number: 80
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: frontend-ingress
+#   namespace: bank
+#   annotations:
+#     #kubernetes.io/ingress.class: "gce"
+#     kubernetes.io/ingress.class: "gce-internal"
+#     kubernetes.io/ingress.allow-http: "true"
+# spec:
+#  rules:
+#  #- host: google.com
+#   - http:
+#       paths:
+#       - path: /*
+#         pathType: ImplementationSpecific
+#         backend:
+#           service:
+#             name: frontend
+#             port:
+#               number: 80
